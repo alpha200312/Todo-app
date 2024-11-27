@@ -6,6 +6,7 @@ const bcryptjs=require("bcryptjs");
 const user_jwt=require('../middleware/user_jwt');
 const jwt=require('jsonwebtoken');
 router.post('/login', async(req, res, next) => {
+    console.log("inside login");
     const email = req.body.email;
     const password = req.body.password;
 
