@@ -1,7 +1,8 @@
 const jwt = require('jsonwebtoken');
 console.log("inside usertoken")
 module.exports = async function(req, res, next) {
-    
+    console.log("inside fuction");
+
     const token = req.header('Authorization');
 
     if(!token) {
@@ -18,6 +19,7 @@ module.exports = async function(req, res, next) {
                 });
             } else {
                 req.user = decoded.user;
+                console.log(decoded.user);
                 next();
             }
         });

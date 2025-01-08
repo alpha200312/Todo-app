@@ -37,7 +37,9 @@ app.use((req,res,next)=>{
 
 /// to call the router and use to add it in middleware 
 const router=require('./routes/user')
-app.use('/todo/auth',router);
+const r=require("./routes/todo");
+app.use('/api/todo/auth',router);
+app.use('/api/todo',r);
 
 
 
